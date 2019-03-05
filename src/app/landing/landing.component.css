@@ -22,3 +22,32 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.styled {
+  margin:auto;
+  padding: 3%;
+}
+.landing-main-card {
+  padding: 3%;
+}
+.main-card-body {
+  background-color: #caa5a5;
+  color:#ffffff;
+}
+.main-card-button {
+  background-color: #123255;
+  border-color: #123255;
+}
+.main-card-button:hover {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+}
+.active {
+  cursor: pointer;
+}
+.active:hover {
+  cursor: pointer;
+  box-shadow: 3px 4px 4px 0 rgba(62, 47, 47, 0.36);
+}
+
