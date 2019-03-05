@@ -13,12 +13,16 @@ import { LandingComponent } from './landing/landing.component';
 import { PlaceComponent } from './place/place.component';
 // leaflet asymetik
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+// own components
 import { GeolocationService } from './services/geolocation.service';
 import { FormComponent } from './form/form.component';
 import { DatatableComponent } from './datatable/datatable.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 // Angular Data Tables
 import { DataTablesModule } from 'angular-datatables';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+// Charts module
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PlaceComponent,
     FormComponent,
     DatatableComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,11 +46,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LeafletModule.forRoot(),
     // Angular Data Tables
     DataTablesModule
+
   ],
   providers: [
     GeolocationService
   ],
   bootstrap: [AppComponent],
-  exports: [SiteComponent, LandingComponent, PlaceComponent, FormComponent, DatatableComponent, PageNotFoundComponent]
+  exports: [SiteComponent, LandingComponent, PlaceComponent, FormComponent, DatatableComponent, PageNotFoundComponent, ChartsComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+import { ChartsComponent } from './charts/charts.component';
 import { FormComponent } from './form/form.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { SiteComponent } from './site/site.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'place', component: PlaceComponent },
     { path: 'datatable', component: DatatableComponent },
     { path: 'form', component: FormComponent },
+    { path: 'charts', component: ChartsComponent },
     { path: '', redirectTo: 'landing', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
   ] }
