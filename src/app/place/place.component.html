@@ -19,7 +19,8 @@
           </ul>
         </div>
         <br/>
-        <p>
+        <h6 *ngIf="location" >Raw Json response:</h6>
+        <p *ngIf="location">
           {{ location | json }}
         </p>
       </div>
