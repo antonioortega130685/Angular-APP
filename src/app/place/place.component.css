@@ -1,0 +1,39 @@
+#map {
+  height: 80vh;
+}
+.map {
+  /* height: fit-content; */
+  display: inline-block;
+
+}
+.summary {
+  display: inline-block;
+  /* margin: auto; */
+  /* height: 80vh; */
+}
+
+/* suggestions styles */
+.suggestions-li {
+  list-style-type: none;
+  text-align: left;
+}
+.suggestions-li:hover {
+  list-style-type: none;
+  text-align: left;
+  color: #15c3f7;
+}
+
+.suggestions-ul {
+  padding: 3%;
+}
+
+.suggestions-div {
+  width: fit-content;
+  height: fit-content;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+/* .with-styling {
+  padding: 3%;
+} */

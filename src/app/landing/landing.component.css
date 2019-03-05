@@ -1,0 +1,24 @@
+.left-opt {
+  /* background-color: antiquewhite; */
+  height: -webkit-fill-available;
+  display: inline-block;
+  background-image: url('../../assets/img/landscape-iceland.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.center-opt {
+  background-color:blueviolet;
+  height: -webkit-fill-available;
+  display: inline-block;
+  background-image: url('../../assets/img/landscape-desert.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.right-opt {
+  /* background-color:burlywood; */
+  height: -webkit-fill-available;
+  display: inline-block;
+  background-image: url('../../assets/img/landscape-caribbean.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
