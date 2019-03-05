@@ -18,6 +18,7 @@ import { FormComponent } from './form/form.component';
 import { DatatableComponent } from './datatable/datatable.component';
 // Angular Data Tables
 import { DataTablesModule } from 'angular-datatables';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DataTablesModule } from 'angular-datatables';
     LandingComponent,
     PlaceComponent,
     FormComponent,
-    DatatableComponent
+    DatatableComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,6 @@ import { DataTablesModule } from 'angular-datatables';
     GeolocationService
   ],
   bootstrap: [AppComponent],
-  exports: [SiteComponent, LandingComponent, PlaceComponent, FormComponent, DatatableComponent]
+  exports: [SiteComponent, LandingComponent, PlaceComponent, FormComponent, DatatableComponent, PageNotFoundComponent]
 })
 export class AppModule { }
