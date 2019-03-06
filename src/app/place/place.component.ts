@@ -1,8 +1,11 @@
 import { GeolocationService } from './../services/geolocation.service';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 // declare leaflet variable
 import * as L from 'leaflet';
+// leaflet fullscreen
+import '../../../node_modules/leaflet.fullscreen/Control.FullScreen.js';
+import 'leaflet.fullscreen';
+
 import { Observable } from 'rxjs';
 import { PopulationService } from '../services/population.service';
 
@@ -46,6 +49,26 @@ export class PlaceComponent implements OnInit {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(this.map);
+  L.control.fullscreen({
+    position: 'topleft', // change the position of the button can be topleft, topright, bottomright or bottomleft, defaut topleft
+    title: 'Show me the fullscreen !', // change the title of the button, default Full Screen
+    titleCancel: 'Exit fullscreen mode', // change the title of the button when fullscreen is on, default Exit Full Screen
+    content: null, // change the content of the button, can be HTML, default null
+    forceSeparateButton: true, // force seperate button to detach from zoom buttons, default false
+    forcePseudoFullscreen: true, // force use of pseudo full screen even if full screen API is available, default false
+    fullscreenElement: false // Dom element to render in full screen, false by default, fallback to map._container
+  }).addTo(this.map);
+  this.map.on('enterFullscreen', () => this.map.invalidateSize());
+  this.map.on('exitFullscreen', () => this.map.invalidateSize());
+  this.map.on('click', (e) => {
+    if (this.mrkr1) {
+      this.map.removeLayer(this.mrkr1);
+    }
+    this.map.setZoom(7);
+    this.mrkr1 = new L.Marker(e.latlng, {icon: this.markerIcon}).addTo(this.map);
+    this.map.panTo([e.latlng.lat, e.latlng.lng]);
+
+  });
 }
 
 // take input addresses to map
