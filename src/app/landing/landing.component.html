@@ -1,47 +1,38 @@
 <div class="container-fluid">
   <div class="landing-main-card">
-      <div class="card">
-          <!-- <div class="card-header">
-            Featured
-          </div> -->
-          <div class="card-body main-card-body">
-            <h5 class="card-title">Welcome to this demonstration app</h5>
-            <p class="card-text">Here you'll find exactly what you were looking for your own app. This has been built mainly in Angular 7 and Bootstrap 4, staying at the cutting edge of Front-End technologies and utilizing several different libraries that enhance UX, and provide faster solutions for larger businesses. This can easily be integrated with .NET, Python, Ruby, Node or whatever Back-End services you're using on your project.</p>
-            <a href="#" class="btn btn-primary main-card-button">Reload Page</a>
-          </div>
-        </div>
+    <div class="card">
+      <div class="card-body main-card-body">
+        <h5 class="card-title">Welcome to this demonstration app</h5>
+        <p class="card-text">Here you'll find exactly what you were looking for your own app. This has been built mainly in Angular 7 and Bootstrap 4, staying at the cutting edge of Front-End technologies and utilizing several different libraries that enhance UX, and provide faster solutions for larger businesses. This can easily be integrated with .NET, Python, Ruby, Node or whatever Back-End services you're using on your project.</p>
+        <a href="#" class="btn btn-primary main-card-button">Reload Page</a>
+      </div>
+    </div>
   </div>
 
   <div class="card-columns container styled">
-    <!-- <div class="col-3 left-opt"></div>
-    <div class="col-6 center-opt"></div>
-    <div class="col-3 right-opt"></div> -->
     <div class="col">
-        <div class="card border-info mb-3 active osm" (mouseenter)="hover0=true" (mouseleave)="hover0=false" style="max-width: 18rem;"  routerLink='/place' routerLinkActive='active'>
-            <!-- <div class="card-header">Header</div> -->
-            <div class="card-body text-info">
-              <h5 class="card-title" [ngStyle]="{color: hover0? 'inherit': 'transparent'}">GIS Services</h5>
-              <p class="card-text" [ngStyle]="{color: hover0? 'inherit': 'transparent'}">Some quick example on implementation of OpenStreetMap, Nominatim and Leaflet to provide address lookup using a query term.</p>
-            </div>
-          </div>
+      <div class="card border-info mb-3 active osm" (mouseenter)="hover0=true" (mouseleave)="hover0=false" style="max-width: 18rem;"  routerLink='/place' routerLinkActive='active'>
+        <div class="card-body text-info">
+          <h5 class="card-title" [ngStyle]="{color: hover0? 'inherit': 'transparent'}">GIS Services</h5>
+          <p class="card-text" [ngStyle]="{color: hover0? 'inherit': 'transparent'}">Some quick example on implementation of OpenStreetMap, Nominatim and Leaflet to provide address lookup using a query term.</p>
+        </div>
+      </div>
     </div>
     <div class="col">
-        <div class="card border-info mb-3 active dtt" (mouseenter)="hover1=true" (mouseleave)="hover1=false" style="max-width: 18rem;" routerLink='/datatable' routerLinkActive='active'>
-            <!-- <div class="card-header">Header</div> -->
-            <div class="card-body text-info">
-              <h5 class="card-title " [ngStyle]="{color: hover1? 'inherit': 'transparent'}">Data Tables Integration</h5>
-              <p class="card-text " [ngStyle]="{color: hover1? 'inherit': 'transparent'}">Some quick example on implementation of a server-side feeded datatable with basic features like buttons, paging, searching and so.</p>
-            </div>
-          </div>
+      <div class="card border-info mb-3 active dtt" (mouseenter)="hover1=true" (mouseleave)="hover1=false" style="max-width: 18rem;" routerLink='/datatable' routerLinkActive='active'>
+        <div class="card-body text-info">
+          <h5 class="card-title " [ngStyle]="{color: hover1? 'inherit': 'transparent'}">Data Tables Integration</h5>
+          <p class="card-text " [ngStyle]="{color: hover1? 'inherit': 'transparent'}">Some quick example on implementation of a server-side feeded datatable with basic features like buttons, paging, searching and so.</p>
+        </div>
+      </div>
     </div>
     <div class="col">
-        <div class="card border-info mb-3 active chjs" (mouseenter)="hover2=true" (mouseleave)="hover2=false" style="max-width: 18rem;" routerLink='/charts' routerLinkActive='active'>
-            <!-- <div class="card-header">Header</div> -->
-            <div class="card-body text-info">
-              <h5 class="card-title cd-tx" [ngStyle]="{color: hover2? 'inherit': 'transparent'}">Charts integration</h5>
-              <p class="card-text cd-tx" [ngStyle]="{color: hover2? 'inherit': 'transparent'}">Some quick example on implementation of charts.js with the most common exmaples like line, bar, doughnut and polar charts.</p>
-            </div>
-          </div>
+      <div class="card border-info mb-3 active chjs" (mouseenter)="hover2=true" (mouseleave)="hover2=false" style="max-width: 18rem;" routerLink='/charts' routerLinkActive='active'>
+        <div class="card-body text-info">
+          <h5 class="card-title cd-tx" [ngStyle]="{color: hover2? 'inherit': 'transparent'}">Charts integration</h5>
+          <p class="card-text cd-tx" [ngStyle]="{color: hover2? 'inherit': 'transparent'}">Some quick example on implementation of charts.js with the most common exmaples like line, bar, doughnut and polar charts.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 

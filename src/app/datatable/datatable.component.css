@@ -16,3 +16,31 @@ stepping over datatables styles */
 :host >>> .dataTables_length {
   padding: 2%;
 }
+:host >>> button.dt-button, div.dt-button, a.dt-button {
+  color: #17a2b8;
+  border-color: #17a2b8;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+}
+:host >>> button.dt-button:hover:not(.disabled),
+div.dt-button:hover:not(.disabled),
+a.dt-button:hover:not(.disabled) {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  border-bottom-color: #4f9fef;
+  border-top-color: #bd72d0;
+  background-image: linear-gradient(to bottom, #bd72d0 0%, #4f9fef 100%);
+}
+:host /deep/ .dataTables_wrapper .dataTables_paginate .paginate_button {
+  display: contents;
+}
+:host /deep/ table.dataTable thead .sorting_asc {
+  background-image: none;
+}
+:host /deep/ table.dataTable thead .sorting_desc {
+  background-image: none;
+}
+:host /deep/ table.dataTable thead .sorting {
+  background-image: none;
+}
+

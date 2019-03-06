@@ -19,9 +19,21 @@
         </ul>
       </div>
       <br/>
-      <h6 *ngIf="location" >Raw Json response:</h6>
-      <p *ngIf="location">
+      <h6 *ngIf="location && false" >Raw Json response:</h6>
+      <p *ngIf="location && false">
         {{ location | json }}
+      </p>
+      <h5 *ngIf="location" >Selected Place:</h5>
+      <p *ngIf="location">
+        {{ location.display_name }}
+      </p>
+      <h6 *ngIf="location" >Pin Location:</h6>
+      <p *ngIf="location">
+        lat , lng => {{ location.lat }} , {{ location.lon }}
+      </p>
+      <h6 *ngIf="pops" >Country's Population Today:</h6>
+      <p *ngIf="pops">
+        {{ pops }} habitants
       </p>
     </div>
   </div>

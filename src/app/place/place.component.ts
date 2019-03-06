@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 // declare leaflet variable
 import * as L from 'leaflet';
 import { Observable } from 'rxjs';
+import { PopulationService } from '../services/population.service';
 
 @Component({
   selector: 'app-place',
@@ -30,9 +31,11 @@ export class PlaceComponent implements OnInit {
   location;
   query;
   queryTerm;
+  // population
+  pops;
 
 
-  constructor(public geolocation: GeolocationService) { }
+  constructor(private geolocation: GeolocationService, private popService: PopulationService) { }
 
   ngOnInit() {
     this.onLoadMap();
@@ -65,12 +68,18 @@ onChoice(loc) {
   this.mrkr1 = new L.Marker([this.lat, this.lng], { icon : actualIcon }).addTo(this.map);
   this.map.fitBounds(bounds);
   this.map.panTo([this.lat, this.lng]);
-  // this.map.setZoom(4);
   this.location$ = null;
   this.queryTerm = null;
-  console.log(this.location.boundingbox);
   this.map.setMaxBounds(this.location.boundingbox);
-
+  const t = this.location.display_name.split(' ').splice(-1);
+  console.log(t);
+  // this.popService.getCountryPopulation(t).subscribe(
+  //   d => {
+  //     console.log(d);
+  //     this.pops = d.rank;
+  //   },
+  //   error => console.log(error)
+  // );
 }
 
 // fn to enable search by term, does an async pipe to subscribe/unsubscribe whenever needed
@@ -78,18 +87,6 @@ onSearchPlace(q) {
   console.log(q);
   this.queryTerm = q;
   this.location$ = this.geolocation.nominatimLLookup(q);
-  // const search = this.geolocation.nominatimLLookup(q).subscribe(
-  //     x => {
-  //       console.log(x);
-  //       const list = x;
-
-  //       // if (list.length === 1) {
-  //       //     q = list[0].display_name;
-  //       // }
-  //     },
-  //     error => console.log(error),
-  //     () => search.unsubscribe()
-  //   );
 }
 
 }

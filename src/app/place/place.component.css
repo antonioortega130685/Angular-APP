@@ -1,5 +1,7 @@
 #map {
   height: 80vh;
+  border: 1px solid #343a40;
+
 }
 .map {
   /* height: fit-content; */
