@@ -14,6 +14,9 @@ export class SiteComponent implements OnInit {
   ngOnInit() {
   }
 
+  notReady() {
+    alert("This isn't quite ready yet!");
+  }
 
 
 }
