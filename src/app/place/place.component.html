@@ -1,28 +1,28 @@
 <div class="container">
   <div class="row">
     <div class="intro">
-        <h1>Get Geo Location GIS functionality for your app</h1>
-        <p>Using popular libraries such as Google Maps API, Mapbox or like in this case, Open Street Maps and Leaflet.</p>
+      <h1>Get Geo Location GIS functionality for your app</h1>
+      <p>Using popular libraries such as Google Maps API, Mapbox or like in this case, Open Street Maps and Leaflet.</p>
     </div>
-      <div class="col-6 map">
-          <div id="map"></div>
+    <div class="col-6 map">
+      <div id="map"></div>
+    </div>
+    <div class="col-6 summary">
+      <div class="input-group" >
+        <input type="text" #loc class="form-control location-input" (ngModel)="location" placeholder="Location" (keyup)="onSearchPlace(loc.value)">
       </div>
-      <div class="col-6 summary">
-        <div class="input-group" >
-          <input type="text" #loc class="form-control location-input" (ngModel)="location" placeholder="Location" (keyup)="onSearchPlace(loc.value)">
-        </div>
-        <div class="suggestions-div" *ngIf="location$ && queryTerm" >
-          <ul class="suggestions-ul">
-            <li *ngFor="let loc of location$ | async " class="suggestions-li" (click)="onChoice(loc)" >
-              {{ loc.display_name }}
-            </li>
-          </ul>
-        </div>
-        <br/>
-        <h6 *ngIf="location" >Raw Json response:</h6>
-        <p *ngIf="location">
-          {{ location | json }}
-        </p>
+      <div class="suggestions-div" *ngIf="location$ && queryTerm" >
+        <ul class="suggestions-ul">
+          <li *ngFor="let loc of location$ | async " class="suggestions-li" (click)="onChoice(loc)" >
+            {{ loc.display_name }}
+          </li>
+        </ul>
       </div>
+      <br/>
+      <h6 *ngIf="location" >Raw Json response:</h6>
+      <p *ngIf="location">
+        {{ location | json }}
+      </p>
+    </div>
   </div>
 </div>
