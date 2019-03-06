@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  hover0;
+  hover1;
+  hover2;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
 }

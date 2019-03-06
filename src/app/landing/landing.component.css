@@ -45,9 +45,33 @@
 }
 .active {
   cursor: pointer;
+  color: transparent;
 }
 .active:hover {
   cursor: pointer;
   box-shadow: 3px 4px 4px 0 rgba(62, 47, 47, 0.36);
+  background-color: transparent;
+  background-image: none;
+}
+.osm {
+  background-image: url('../../assets/img/card-covers/openstreetmap_356386_full.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dtt {
+  background-image: url('../../assets/img/card-covers/datatables-sorting-feature.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.chjs {
+  background-image: url('../../assets/img/card-covers/20161014011001_chart-js.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cd-tx {
+  color: transparent;
+}
+.cd-tx:hover {
+  color: inherit;
 }
 
