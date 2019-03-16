@@ -1,5 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { PlaceComponent } from '../place/place.component';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-site',
@@ -7,7 +6,6 @@ import { PlaceComponent } from '../place/place.component';
   styleUrls: ['./site.component.css']
 })
 export class SiteComponent implements OnInit {
-
 
   constructor() { }
 
