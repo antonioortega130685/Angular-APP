@@ -23,6 +23,7 @@
   list-style-type: none;
   text-align: left;
   color: #15c3f7;
+  cursor: pointer;
 }
 
 .suggestions-ul {

@@ -1,5 +1,5 @@
+import { environment } from 'src/environments/environment';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-
 import { HttpClient } from '@angular/common/http';
 
 class Person {
@@ -20,12 +20,12 @@ class DataTablesResponse {
   templateUrl: './datatable.component.html',
   styleUrls: ['./datatable.component.css']
 })
-export class DatatableComponent implements  OnInit {
+export class DatatableComponent implements OnInit {
 
   dtOptions: any = {};
   persons: Person[];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     const that = this;
@@ -53,11 +53,10 @@ export class DatatableComponent implements  OnInit {
       ajax: (dataTablesParameters: any, callback) => {
         that.http
           .post<DataTablesResponse>(
-            'https://angular-datatables-demo-server.herokuapp.com/',
+            environment.DATATABLE_DATA_URL,
             dataTablesParameters, {}
           ).subscribe(resp => {
             that.persons = resp.data;
-
             callback({
               recordsTotal: resp.recordsTotal,
               recordsFiltered: resp.recordsFiltered,

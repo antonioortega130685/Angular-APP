@@ -1,0 +1,21 @@
+.backgrd {
+  /* background-color: #caa5a5; */
+  background-image: linear-gradient(to bottom, #bd72d0 0%, #4f9fef 100%);
+  height: auto;
+  background-size: cover;
+}
+.auth-c {
+  background-color: #ffffff;
+  position: relative;
+  height: 50%;
+  width: 60%;
+  margin: auto;
+  padding: 20%;
+  border-radius: 3%;
+}
+.filler {
+  height: 25%;
+  background-color: transparent;
+  padding: 4%;
+
+}

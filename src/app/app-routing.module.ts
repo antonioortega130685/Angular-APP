@@ -7,8 +7,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { PlaceComponent } from './place/place.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthComponent } from './auth/auth.component';
 
 const routes: Routes = [
+  { path: 'auth', component: AuthComponent},
   { path: '', component: SiteComponent, children: [
     { path: 'landing', component: LandingComponent },
     { path: 'place', component: PlaceComponent },

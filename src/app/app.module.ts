@@ -23,6 +23,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DataTablesModule } from 'angular-datatables';
 // Charts module
 import { ChartsComponent } from './charts/charts.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ChartsComponent } from './charts/charts.component';
     FormComponent,
     DatatableComponent,
     PageNotFoundComponent,
-    ChartsComponent
+    ChartsComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,6 @@ import { ChartsComponent } from './charts/charts.component';
     GeolocationService
   ],
   bootstrap: [AppComponent],
-  exports: [SiteComponent, LandingComponent, PlaceComponent, FormComponent, DatatableComponent, PageNotFoundComponent, ChartsComponent]
+  exports: [SiteComponent, LandingComponent, PlaceComponent, FormComponent, DatatableComponent, PageNotFoundComponent, ChartsComponent, AuthComponent]
 })
 export class AppModule { }
