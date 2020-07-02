@@ -35,14 +35,28 @@ export class DatatableComponent implements OnInit {
       buttons: [
         // 'columnsToggle', need a propper touch
         // 'colvis',
-        'copy',
-        'print',
-        'excel',
+        // 'copy', // package bugs
+        // 'print', // package bugs
+        // 'excel', // package bugs
         {
-          text: 'Some button',
+          text: 'Action Button 1',
           key: '1',
           action: function (e, dt, node, config) {
-            alert('Button activated');
+            alert('Action Button  1 activated');
+          }
+        },
+        {
+          text: 'Action Button 2',
+          key: '2',
+          action: function (e, dt, node, config) {
+            alert('Action Button  1 activated');
+          }
+        },
+        {
+          text: 'Action Button 3',
+          key: '3',
+          action: function (e, dt, node, config) {
+            alert('Action Button  3 activated');
           }
         }
       ],

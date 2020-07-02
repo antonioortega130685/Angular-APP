@@ -13,3 +13,7 @@
   padding: 16%;
 }
 
+.dataTables_empty {
+  display: none;
+} 
+

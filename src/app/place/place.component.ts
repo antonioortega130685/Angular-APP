@@ -61,15 +61,14 @@ export class PlaceComponent implements OnInit {
     }).addTo(this.map);
     this.map.on('enterFullscreen', () => this.map.invalidateSize());
     this.map.on('exitFullscreen', () => this.map.invalidateSize());
-    this.map.on('click', (e) => {
-      if (this.mrkr1) {
-        this.map.removeLayer(this.mrkr1);
-      }
-      this.map.setZoom(7);
-      this.mrkr1 = new L.Marker(e.latlng, { icon: this.markerIcon }).addTo(this.map);
-      this.map.panTo([e.latlng.lat, e.latlng.lng]);
-
-    });
+    // this.map.on('click', (e) => {
+    //   if (this.mrkr1) {
+    //     this.map.removeLayer(this.mrkr1);
+    //   }
+    //   this.map.setZoom(7);
+    //   this.mrkr1 = new L.Marker(e.latlng, { icon: this.markerIcon }).addTo(this.map);
+    //   this.map.panTo([e.latlng.lat, e.latlng.lng]);
+    // });
   }
 
   // take input addresses to map
@@ -84,8 +83,10 @@ export class PlaceComponent implements OnInit {
       corner2 = L.latLng(loc.boundingbox[1], loc.boundingbox[3]),
       bounds = L.latLngBounds(corner1, corner2);
     // to enable Nominatim url icons on map
-    // const nominatimIcon = new L.Icon({
-    //   iconUrl : loc.icon
+    // const nominatimIcon = L.icon({
+    //   iconUrl: loc.icon,
+    //   iconSize: [25, 25], // size of the icon
+    //   iconAnchor: [18, 18], // point of the icon which will correspond to marker's location
     // });
     // const actualIcon = nominatimIcon || this.markerIcon;
     const actualIcon = this.markerIcon;
@@ -94,7 +95,6 @@ export class PlaceComponent implements OnInit {
     this.map.panTo([this.lat, this.lng]);
     this.location$ = null;
     this.queryTerm = null;
-    this.map.setMaxBounds(this.location.boundingbox);
     const t = this.location.display_name.split(' ').splice(-1);
     // this.popService.getCountryPopulation(t).subscribe(
     //   d => {
@@ -107,7 +107,6 @@ export class PlaceComponent implements OnInit {
 
   // fn to enable search by term, does an async pipe to subscribe/unsubscribe whenever needed
   onSearchPlace(q) {
-    console.log(q);
     this.queryTerm = q;
     this.location$ = this.geolocation.nominatimLLookup(q);
   }
